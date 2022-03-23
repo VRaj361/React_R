@@ -2,37 +2,41 @@ import logo from './logo.svg';
 import './App.css';
 import Home from './components/Home';
 import { ContactUs } from './components/ContactUs';
+import { Movies } from './components/Movies';
+import { Route, Routes } from 'react-router-dom'
+import {MoviesDetail} from './components/MoviesDetail'
 
 function App() {
   //javascript 
-  var name="vraj"//string
-  var num=23//int
-  var numf=12.24//float
-  var age=true//boolean
-  var st={
-    color:"red"
-  }//css property
-  var obj=[{
-    name:"patel",
-    age:23,
-    gender:"male"
-  },{
-    name:"fda",
-    age:21,
-    gender:"female"
-  }]//obj array
-  var o={name:"patil",
-  age:21,
-  gender:"female"}
+  // var name="vraj"//string
+  // var num=23//int
+  // var numf=12.24//float
+  // var age=true//boolean
+  // var st={
+  //   color:"red"
+  // }//css property
+  // var obj=[{
+  //   name:"patel",
+  //   age:23,
+  //   gender:"male"
+  // },{
+  //   name:"fda",
+  //   age:21,
+  //   gender:"female"
+  // }]//obj array
+  // var o={name:"patil",
+  // age:21,
+  // gender:"female"}
   
-  //onclick
-  function run(){
-    alert("this is alert")
-  }
-  console.log(numf)
-  // if(age){
-  //   return <div>hello world</div>
+  // //onclick
+  // function run(){
+  //   alert("this is alert")
   // }
+  // console.log(numf)
+  // // if(age){
+  // //   return <div>hello world</div>
+  // // }
+
   return (
     <div className="App">
       {/* <h1>Kem chho</h1>
@@ -57,7 +61,15 @@ function App() {
       {/* <h2>{o.name}</h2> */}
       
         {/* <button onClick={()=>run()}>Alert</button> } */}
-        <Home obj={obj}/>
+        {/* <Home obj={obj}/> */}
+
+
+
+        <Movies/>
+        <Routes>
+          <Route path='/movies/moviesdetail/:id' element={<MoviesDetail/>}></Route>
+        </Routes>
+    
         
     </div>
   );
