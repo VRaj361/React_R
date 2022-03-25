@@ -9,7 +9,7 @@ export const Movies = () => {
     { id: "13211", price: 100, movieName: "Kashmir file", rating: 4 },
     { id: "13412", price: 200, movieName: "Udta punjeb", rating: 1 },
   ];
-  let id;
+  
   return (
     <div>
       <h1>Movies</h1>
@@ -41,4 +41,7 @@ export const Movies = () => {
       </table>
     </div>
   );
+  
 };
+export default Movies;
+

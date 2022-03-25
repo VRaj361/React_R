@@ -3,7 +3,7 @@ import './App.css';
 import Home from './components/Home';
 import { ContactUs } from './components/ContactUs';
 import { Movies } from './components/Movies';
-import { Route, Routes } from 'react-router-dom'
+import { Link, Route, Routes } from 'react-router-dom'
 import {MoviesDetail} from './components/MoviesDetail'
 
 function App() {
@@ -63,10 +63,11 @@ function App() {
         {/* <button onClick={()=>run()}>Alert</button> } */}
         {/* <Home obj={obj}/> */}
 
+        <Link className='btn btn-primary' to={'/movies'}>Movies click</Link>
 
-
-        <Movies/>
+        {/* <Movies/> */}
         <Routes>
+          <Route path="/movies" element={<Movies/>}></Route>
           <Route path='/movies/moviesdetail/:id' element={<MoviesDetail/>}></Route>
         </Routes>
     
