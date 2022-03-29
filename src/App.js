@@ -5,6 +5,7 @@ import { ContactUs } from './components/ContactUs';
 import { Movies } from './components/Movies';
 import { Link, Route, Routes } from 'react-router-dom'
 import {MoviesDetail} from './components/MoviesDetail'
+import { ReactForm } from './components/ReactForm';
 
 function App() {
   //javascript 
@@ -15,15 +16,15 @@ function App() {
   // var st={
   //   color:"red"
   // }//css property
-  // var obj=[{
-  //   name:"patel",
-  //   age:23,
-  //   gender:"male"
-  // },{
-  //   name:"fda",
-  //   age:21,
-  //   gender:"female"
-  // }]//obj array
+  var obj=[{
+    name:"patel",
+    age:23,
+    gender:"male"
+  },{
+    name:"fda",
+    age:21,
+    gender:"female"
+  }]//obj array
   // var o={name:"patil",
   // age:21,
   // gender:"female"}
@@ -63,12 +64,12 @@ function App() {
         {/* <button onClick={()=>run()}>Alert</button> } */}
         {/* <Home obj={obj}/> */}
 
-        <Link className='btn btn-primary' to={'/movies'}>Movies click</Link>
-
+        {/* <Link className='btn btn-primary' to={'/movies'}>Movies click</Link> */}
+        {<ReactForm/>}
         {/* <Movies/> */}
         <Routes>
           <Route path="/movies" element={<Movies/>}></Route>
-          <Route path='/movies/moviesdetail/:id' element={<MoviesDetail/>}></Route>
+          <Route path='/movies/moviesdetail/:id' element={<MoviesDetail  />}></Route>
         </Routes>
     
         
