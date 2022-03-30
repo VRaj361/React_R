@@ -4,8 +4,9 @@ import Home from './components/Home';
 import { ContactUs } from './components/ContactUs';
 import { Movies } from './components/Movies';
 import { Link, Route, Routes } from 'react-router-dom'
-import {MoviesDetail} from './components/MoviesDetail'
+import { MoviesDetail } from './components/MoviesDetail'
 import { ReactForm } from './components/ReactForm';
+import { EmployeeDetails } from './components/EmployeeDetails';
 
 function App() {
   //javascript 
@@ -16,19 +17,19 @@ function App() {
   // var st={
   //   color:"red"
   // }//css property
-  var obj=[{
-    name:"patel",
-    age:23,
-    gender:"male"
-  },{
-    name:"fda",
-    age:21,
-    gender:"female"
+  var obj = [{
+    name: "patel",
+    age: 23,
+    gender: "male"
+  }, {
+    name: "fda",
+    age: 21,
+    gender: "female"
   }]//obj array
   // var o={name:"patil",
   // age:21,
   // gender:"female"}
-  
+
   // //onclick
   // function run(){
   //   alert("this is alert")
@@ -60,19 +61,20 @@ function App() {
       })} 
       {/* {run()} */}
       {/* <h2>{o.name}</h2> */}
-      
-        {/* <button onClick={()=>run()}>Alert</button> } */}
-        {/* <Home obj={obj}/> */}
 
-        {/* <Link className='btn btn-primary' to={'/movies'}>Movies click</Link> */}
-        {<ReactForm/>}
-        {/* <Movies/> */}
-        <Routes>
-          <Route path="/movies" element={<Movies/>}></Route>
-          <Route path='/movies/moviesdetail/:id' element={<MoviesDetail  />}></Route>
-        </Routes>
-    
-        
+      {/* <button onClick={()=>run()}>Alert</button> } */}
+      {/* <Home obj={obj}/> */}
+
+      {/* <Link className='btn btn-primary' to={'/movies'}>Movies click</Link> */}
+      {<ReactForm />}
+      {/* <Movies/> */}
+      <Routes>
+        {/* <Route path="/movies" element={<Movies />}></Route> */}
+        {/* <Route path='/movies/moviesdetail/:id' element={<MoviesDetail />}></Route> */}
+        <Route path='/employeeDetails/:id' element={<EmployeeDetails />}></Route>
+      </Routes>
+
+
     </div>
   );
 }
