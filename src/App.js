@@ -7,7 +7,9 @@ import { Link, Route, Routes } from 'react-router-dom'
 import { MoviesDetail } from './components/MoviesDetail'
 import { ReactForm } from './components/ReactForm';
 import { EmployeeDetails } from './components/EmployeeDetails';
-
+import {TicketDetails} from './components/TicketDetails';
+import { AddTicket } from './components/AddTicket';
+import {useState} from 'react';
 function App() {
   //javascript 
   // var name="vraj"//string
@@ -39,6 +41,15 @@ function App() {
   // //   return <div>hello world</div>
   // // }
 
+  // var tickets=[{name:"badshah",type:"thrill"},{name:"Premi devana",type:"romance"}];
+  
+  const [tickets, settickets] = useState([{name:"badshah",type:"thrill"},{name:"Premi devana",type:"romance"}])
+  const deleteTicket=(ticket)=>{
+    settickets(tickets.filter(t=>t.name!==ticket.name))
+  }
+  const addTicket=(ticket)=>{
+    settickets([...tickets,ticket])
+  }
   return (
     <div className="App">
       {/* <h1>Kem chho</h1>
@@ -66,8 +77,12 @@ function App() {
       {/* <Home obj={obj}/> */}
 
       {/* <Link className='btn btn-primary' to={'/movies'}>Movies click</Link> */}
-      {<ReactForm />}
+      {/* {<ReactForm />} */}
       {/* <Movies/> */}
+      {/* {<AddTicket/>} */}
+      
+      {<AddTicket addTicket = {addTicket}/>}
+      {<TicketDetails tickets={tickets} deleteTicket={deleteTicket}/>}
       <Routes>
         {/* <Route path="/movies" element={<Movies />}></Route> */}
         {/* <Route path='/movies/moviesdetail/:id' element={<MoviesDetail />}></Route> */}
