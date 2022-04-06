@@ -6,7 +6,7 @@ export const TicketDetails = (props) => {
 
         <h1>Ticket Details</h1>
         {props.tickets.map((ticket)=>{
-            return <Ticketinfo ticket={ticket} deleteTicket={props.deleteTicket}/>
+            return <Ticketinfo ticket={ticket} deleteTicket={props.deleteTicket} countVal={props.countVal} count={props.count} tickets={props.tickets}/>
         })}
 
     </div>

@@ -10,6 +10,7 @@ import { EmployeeDetails } from './components/EmployeeDetails';
 import {TicketDetails} from './components/TicketDetails';
 import { AddTicket } from './components/AddTicket';
 import {useState} from 'react';
+import { SimpleForm } from './components/SimpleForm';
 function App() {
   //javascript 
   // var name="vraj"//string
@@ -44,11 +45,16 @@ function App() {
   // var tickets=[{name:"badshah",type:"thrill"},{name:"Premi devana",type:"romance"}];
   
   const [tickets, settickets] = useState([{name:"badshah",type:"thrill"},{name:"Premi devana",type:"romance"}])
+  const [count, setcount] = useState(1)
   const deleteTicket=(ticket)=>{
     settickets(tickets.filter(t=>t.name!==ticket.name))
   }
   const addTicket=(ticket)=>{
     settickets([...tickets,ticket])
+  }
+  const countVal=(e)=>{
+      setcount(count+e)
+      console.log(count)
   }
   return (
     <div className="App">
@@ -81,8 +87,9 @@ function App() {
       {/* <Movies/> */}
       {/* {<AddTicket/>} */}
       
-      {<AddTicket addTicket = {addTicket}/>}
-      {<TicketDetails tickets={tickets} deleteTicket={deleteTicket}/>}
+      {/* {<AddTicket addTicket = {addTicket}/>} */}
+      {/* {<TicketDetails tickets={tickets} deleteTicket={deleteTicket} countVal={countVal} count={count}/>} */}
+      {<SimpleForm/>}
       <Routes>
         {/* <Route path="/movies" element={<Movies />}></Route> */}
         {/* <Route path='/movies/moviesdetail/:id' element={<MoviesDetail />}></Route> */}
