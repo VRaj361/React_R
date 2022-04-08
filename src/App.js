@@ -11,6 +11,7 @@ import {TicketDetails} from './components/TicketDetails';
 import { AddTicket } from './components/AddTicket';
 import {useState} from 'react';
 import { SimpleForm } from './components/SimpleForm';
+import { SimpleCustomHook } from './components/SimpleCustomHook';
 function App() {
   //javascript 
   // var name="vraj"//string
@@ -89,7 +90,7 @@ function App() {
       
       {/* {<AddTicket addTicket = {addTicket}/>} */}
       {/* {<TicketDetails tickets={tickets} deleteTicket={deleteTicket} countVal={countVal} count={count}/>} */}
-      {<SimpleForm/>}
+      {<SimpleCustomHook/>}
       <Routes>
         {/* <Route path="/movies" element={<Movies />}></Route> */}
         {/* <Route path='/movies/moviesdetail/:id' element={<MoviesDetail />}></Route> */}
