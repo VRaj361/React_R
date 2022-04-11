@@ -22,7 +22,7 @@ const UserinputHook = () => {
     }
 
     return {
-        value: enteredvalue,valueChangeHandler,valuevalidation,valuevalidationhandler
+        value1: enteredvalue,valueChangeHandler,valuevalidation,valuevalidationhandler
     }
 }
 export default UserinputHook;

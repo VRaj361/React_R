@@ -1,10 +1,10 @@
 import React from 'react'
 import UserinputHook from './UserinputHook'
 export const SimpleCustomHook = () => {
-    const { value: email, valueChangeHandler: emailchangehandler } = UserinputHook()
-    const { value: password, valueChangeHandler: passwordchangehandler } = UserinputHook()
-    const { value: gender, valueChangeHandler: genderchangehandler } = UserinputHook()
-    const { value: menu, valueChangeHandler: menuchangehandler } = UserinputHook()
+    const { value1: email, valueChangeHandler: emailchangehandler } = UserinputHook()
+    const { value1: password, valueChangeHandler: passwordchangehandler } = UserinputHook()
+    const { value1: gender, valueChangeHandler: genderchangehandler } = UserinputHook()
+    const { value1: menu, valueChangeHandler: menuchangehandler } = UserinputHook()
 
     const submit = () => {
 
