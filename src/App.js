@@ -12,6 +12,7 @@ import { AddTicket } from './components/AddTicket';
 import {useState} from 'react';
 import { SimpleForm } from './components/SimpleForm';
 import { SimpleCustomHook } from './components/SimpleCustomHook';
+import { UserApi } from './components/UserApi';
 function App() {
   //javascript 
   // var name="vraj"//string
@@ -90,11 +91,12 @@ function App() {
       
       {/* {<AddTicket addTicket = {addTicket}/>} */}
       {/* {<TicketDetails tickets={tickets} deleteTicket={deleteTicket} countVal={countVal} count={count}/>} */}
-      {<SimpleCustomHook/>}
+      {/* {<SimpleCustomHook/>} */}
+      {<UserApi/>}
       <Routes>
         {/* <Route path="/movies" element={<Movies />}></Route> */}
         {/* <Route path='/movies/moviesdetail/:id' element={<MoviesDetail />}></Route> */}
-        <Route path='/employeeDetails/:id' element={<EmployeeDetails />}></Route>
+        {/* <Route path='/employeeDetails/:id' element={<EmployeeDetails />}></Route> */}
       </Routes>
 
 
