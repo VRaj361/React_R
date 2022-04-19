@@ -13,6 +13,12 @@ import {useState} from 'react';
 import { SimpleForm } from './components/SimpleForm';
 import { SimpleCustomHook } from './components/SimpleCustomHook';
 import { UserApi } from './components/UserApi';
+import { AddProductAPI } from './components/AddProductAPI';
+import { DisplayProductAPI } from './components/DisplayProductAPI';
+import { UpdateProduct } from './components/UpdateProduct';
+import { LocalStorageBasic } from './components/LocalStorageBasic';
+import { FileUpload } from './components/FileUpload';
+import { SessionStorageBasic } from './components/SessionStorageBasic';
 function App() {
   //javascript 
   // var name="vraj"//string
@@ -22,15 +28,15 @@ function App() {
   // var st={
   //   color:"red"
   // }//css property
-  var obj = [{
-    name: "patel",
-    age: 23,
-    gender: "male"
-  }, {
-    name: "fda",
-    age: 21,
-    gender: "female"
-  }]//obj array
+  // var obj = [{
+  //   name: "patel",
+  //   age: 23,
+  //   gender: "male"
+  // }, {
+  //   name: "fda",
+  //   age: 21,
+  //   gender: "female"
+  // }]//obj array
   // var o={name:"patil",
   // age:21,
   // gender:"female"}
@@ -46,18 +52,26 @@ function App() {
 
   // var tickets=[{name:"badshah",type:"thrill"},{name:"Premi devana",type:"romance"}];
   
-  const [tickets, settickets] = useState([{name:"badshah",type:"thrill"},{name:"Premi devana",type:"romance"}])
-  const [count, setcount] = useState(1)
-  const deleteTicket=(ticket)=>{
-    settickets(tickets.filter(t=>t.name!==ticket.name))
-  }
-  const addTicket=(ticket)=>{
-    settickets([...tickets,ticket])
-  }
-  const countVal=(e)=>{
-      setcount(count+e)
-      console.log(count)
-  }
+  // const [tickets, settickets] = useState([{name:"badshah",type:"thrill"},{name:"Premi devana",type:"romance"}])
+  // const [count, setcount] = useState(1)
+  // const deleteTicket=(ticket)=>{
+  //   settickets(tickets.filter(t=>t.name!==ticket.name))
+  // }
+  // const addTicket=(ticket)=>{
+  //   settickets([...tickets,ticket])
+  // }
+  // const countVal=(e)=>{
+  //     setcount(count+e)
+  //     console.log(count)
+  // }
+
+
+  //for product id
+  // const [id, setid] = useState()
+  // const setproductId=(id)=>{  
+  //   setid(id)
+  // }
+  
   return (
     <div className="App">
       {/* <h1>Kem chho</h1>
@@ -92,11 +106,19 @@ function App() {
       {/* {<AddTicket addTicket = {addTicket}/>} */}
       {/* {<TicketDetails tickets={tickets} deleteTicket={deleteTicket} countVal={countVal} count={count}/>} */}
       {/* {<SimpleCustomHook/>} */}
-      {<UserApi/>}
+      {/* {<UserApi/>} */}
+
+      {/* {<AddProductAPI/>}
+      {<DisplayProductAPI />} */}
+      {/* {<UpdateProduct/>} */}
+      {/* <LocalStorageBasic/> */}
+      <FileUpload/>
+      {/* <SessionStorageBasic/> */}
       <Routes>
         {/* <Route path="/movies" element={<Movies />}></Route> */}
         {/* <Route path='/movies/moviesdetail/:id' element={<MoviesDetail />}></Route> */}
         {/* <Route path='/employeeDetails/:id' element={<EmployeeDetails />}></Route> */}
+        <Route path={"/updateproduct/:id"} element={<UpdateProduct />}></Route>
       </Routes>
 
 
