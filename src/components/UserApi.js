@@ -26,7 +26,7 @@ export const UserApi = () => {
     const deleteApi = () => {
         axios.delete("https://reqres.in/api/users/2").then(res => {
             console.log(res.status)
-            if (res.status == 204) {
+            if (res.status === 204) {
                 alert("delete")
             } else {
                 alert("delete not ")
