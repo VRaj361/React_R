@@ -19,6 +19,10 @@ import { UpdateProduct } from './components/UpdateProduct';
 import { LocalStorageBasic } from './components/LocalStorageBasic';
 import { FileUpload } from './components/FileUpload';
 import { SessionStorageBasic } from './components/SessionStorageBasic';
+import { TableDemo } from './components/TableDemo';
+import { GetLocation } from './components/GetLocation';
+import { Protectedrouting } from './components/Protectedrouting';
+import { Productroutinghome } from './components/Productroutinghome';
 function App() {
   //javascript 
   // var name="vraj"//string
@@ -112,13 +116,19 @@ function App() {
       {<DisplayProductAPI />} */}
       {/* {<UpdateProduct/>} */}
       {/* <LocalStorageBasic/> */}
-      <FileUpload/>
+      {/* <FileUpload/> */}
+      {/* <TableDemo/> */}
+      {/* <GetLocation/> */}
+      <Protectedrouting/>
       {/* <SessionStorageBasic/> */}
       <Routes>
         {/* <Route path="/movies" element={<Movies />}></Route> */}
         {/* <Route path='/movies/moviesdetail/:id' element={<MoviesDetail />}></Route> */}
         {/* <Route path='/employeeDetails/:id' element={<EmployeeDetails />}></Route> */}
-        <Route path={"/updateproduct/:id"} element={<UpdateProduct />}></Route>
+        {/* <Route path={"/updateproduct/:id"} element={<UpdateProduct />}></Route> */}
+        { sessionStorage.getItem('name') =="string" ?
+        <Route path="/home" element={<Productroutinghome />}></Route>
+        :"/"}
       </Routes>
 
 
