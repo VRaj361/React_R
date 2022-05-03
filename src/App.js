@@ -23,6 +23,10 @@ import { TableDemo } from './components/TableDemo';
 import { GetLocation } from './components/GetLocation';
 import { Protectedrouting } from './components/Protectedrouting';
 import { Productroutinghome } from './components/Productroutinghome';
+import { AboutUs } from './components/AboutUs';
+import {Error404} from './components/Error404';
+import {GetRequest} from './components/GetRequest'
+import { Pro } from './components/ProError';
 function App() {
   //javascript 
   // var name="vraj"//string
@@ -119,16 +123,21 @@ function App() {
       {/* <FileUpload/> */}
       {/* <TableDemo/> */}
       {/* <GetLocation/> */}
-      <Protectedrouting/>
+      {/* <Protectedrouting/> */}
+      {/* <GetRequest/> */}
+      <Pro/>
       {/* <SessionStorageBasic/> */}
       <Routes>
         {/* <Route path="/movies" element={<Movies />}></Route> */}
         {/* <Route path='/movies/moviesdetail/:id' element={<MoviesDetail />}></Route> */}
         {/* <Route path='/employeeDetails/:id' element={<EmployeeDetails />}></Route> */}
         {/* <Route path={"/updateproduct/:id"} element={<UpdateProduct />}></Route> */}
-        { sessionStorage.getItem('name') =="string" ?
+        {/* { sessionStorage.getItem('name') =="string" ?
         <Route path="/home" element={<Productroutinghome />}></Route>
         :"/"}
+        <Route path="*" element={<Error404/>}></Route>
+        <Route path="/" element={<AboutUs/>}></Route> */}
+
       </Routes>
 
 
