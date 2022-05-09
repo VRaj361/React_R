@@ -27,6 +27,9 @@ import { AboutUs } from './components/AboutUs';
 import {Error404} from './components/Error404';
 import {GetRequest} from './components/GetRequest'
 import { Pro } from './components/ProError';
+import { UseQuery } from './components/UseQuery';
+import { UseQuery1 } from './components/UseQuery1';
+import { UseQuery2 } from './components/UseQuery2'
 function App() {
   //javascript 
   // var name="vraj"//string
@@ -125,7 +128,8 @@ function App() {
       {/* <GetLocation/> */}
       {/* <Protectedrouting/> */}
       {/* <GetRequest/> */}
-      <Pro/>
+      {/* <Pro/> */}
+      <UseQuery/>
       {/* <SessionStorageBasic/> */}
       <Routes>
         {/* <Route path="/movies" element={<Movies />}></Route> */}
@@ -137,7 +141,8 @@ function App() {
         :"/"}
         <Route path="*" element={<Error404/>}></Route>
         <Route path="/" element={<AboutUs/>}></Route> */}
-
+        <Route path="/usequery1" element={<UseQuery1/>}></Route>
+        <Route path="/usequery2" element={<UseQuery2/>}></Route>
       </Routes>
 
 
