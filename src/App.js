@@ -30,6 +30,8 @@ import { Pro } from './components/ProError';
 import { UseQuery } from './components/UseQuery';
 import { UseQuery1 } from './components/UseQuery1';
 import { UseQuery2 } from './components/UseQuery2'
+import { UseQueryr } from './components/UseQueryr';
+import { UseQuery3 } from './components/UseQuery3';
 function App() {
   //javascript 
   // var name="vraj"//string
@@ -129,7 +131,9 @@ function App() {
       {/* <Protectedrouting/> */}
       {/* <GetRequest/> */}
       {/* <Pro/> */}
-      <UseQuery/>
+      {/* <UseQuery/> */}
+      {/* <UseQueryr/> */}
+      <UseQuery3/>
       {/* <SessionStorageBasic/> */}
       <Routes>
         {/* <Route path="/movies" element={<Movies />}></Route> */}
@@ -141,8 +145,8 @@ function App() {
         :"/"}
         <Route path="*" element={<Error404/>}></Route>
         <Route path="/" element={<AboutUs/>}></Route> */}
-        <Route path="/usequery1" element={<UseQuery1/>}></Route>
-        <Route path="/usequery2" element={<UseQuery2/>}></Route>
+        {/* <Route path="/usequery1" element={<UseQuery1/>}></Route>
+        <Route path="/usequery2" element={<UseQuery2/>}></Route> */}
       </Routes>
 
 
