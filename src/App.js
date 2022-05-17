@@ -32,6 +32,7 @@ import { UseQuery1 } from './components/UseQuery1';
 import { UseQuery2 } from './components/UseQuery2'
 import { UseQueryr } from './components/UseQueryr';
 import { UseQuery3 } from './components/UseQuery3';
+import {UseDemo4} from './components/UseDemo4';
 function App() {
   //javascript 
   // var name="vraj"//string
@@ -133,7 +134,8 @@ function App() {
       {/* <Pro/> */}
       {/* <UseQuery/> */}
       {/* <UseQueryr/> */}
-      <UseQuery3/>
+      {/* <UseQuery3/> */}
+      <UseDemo4/>
       {/* <SessionStorageBasic/> */}
       <Routes>
         {/* <Route path="/movies" element={<Movies />}></Route> */}
