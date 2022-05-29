@@ -33,6 +33,7 @@ import { UseQuery2 } from './components/UseQuery2'
 import { UseQueryr } from './components/UseQueryr';
 import { UseQuery3 } from './components/UseQuery3';
 import {UseDemo4} from './components/UseDemo4';
+import { RapidApiWeather } from './components/RapidApiWeather';
 function App() {
   //javascript 
   // var name="vraj"//string
@@ -135,8 +136,9 @@ function App() {
       {/* <UseQuery/> */}
       {/* <UseQueryr/> */}
       {/* <UseQuery3/> */}
-      <UseDemo4/>
+      {/* <UseDemo4/> */}
       {/* <SessionStorageBasic/> */}
+      <RapidApiWeather/>
       <Routes>
         {/* <Route path="/movies" element={<Movies />}></Route> */}
         {/* <Route path='/movies/moviesdetail/:id' element={<MoviesDetail />}></Route> */}
