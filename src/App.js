@@ -34,6 +34,7 @@ import { UseQueryr } from './components/UseQueryr';
 import { UseQuery3 } from './components/UseQuery3';
 import {UseDemo4} from './components/UseDemo4';
 import { RapidApiWeather } from './components/RapidApiWeather';
+import { RapidApiStocks } from './components/RapidApiStocks';
 function App() {
   //javascript 
   // var name="vraj"//string
@@ -138,7 +139,8 @@ function App() {
       {/* <UseQuery3/> */}
       {/* <UseDemo4/> */}
       {/* <SessionStorageBasic/> */}
-      <RapidApiWeather/>
+      {/* <RapidApiWeather/> */}
+      <RapidApiStocks/>
       <Routes>
         {/* <Route path="/movies" element={<Movies />}></Route> */}
         {/* <Route path='/movies/moviesdetail/:id' element={<MoviesDetail />}></Route> */}
