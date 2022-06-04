@@ -16,7 +16,7 @@ export const RapidApiStocks = () => {
 
         axios(options).then(res => {
             console.log(res.data.body.dataLtpGreater20)
-            setdata(res.data.body.dataLtpGreater20)
+          
         })
 
 
@@ -49,7 +49,7 @@ export const RapidApiStocks = () => {
                             return (
                                 <tr>
                                     <td>{e.symbol}</td>
-                                    <td>{e.companyName}</td>
+                                    <td>{e.comapnyName}</td>
                                     <td>{e.new52WHL}</td>
                                     <td>{e.prev52WHL}</td>
                                     <td>{e.prevHLDate}</td>
