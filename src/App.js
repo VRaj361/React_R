@@ -36,6 +36,10 @@ import {UseDemo4} from './components/UseDemo4';
 import { RapidApiWeather } from './components/RapidApiWeather';
 import { RapidApiStocks } from './components/RapidApiStocks';
 import { MaterailUIBasic } from './components/MaterailUIBasic';
+import UserContextProvider from './context/UserContextProvider';
+import { UserDemo } from './context/UserDemo';
+import { UserContext3 } from './context/UserContext3';
+import { UserContext1 } from './context/UserContext1';
 function App() {
   //javascript 
   // var name="vraj"//string
@@ -91,6 +95,7 @@ function App() {
   
   return (
     <div className="App">
+
       {/* <h1>Kem chho</h1>
       <h2>{name}</h2>
       <h2>ANS = {num}</h2>
@@ -142,8 +147,12 @@ function App() {
       {/* <SessionStorageBasic/> */}
       {/* <RapidApiWeather/> */}
       {/* <RapidApiStocks/> */}
-      <MaterailUIBasic/>
+      {/* <MaterailUIBasic/> */}
+      {/* <UserContextProvider> */}
+        {/* <UserDemo/> */}
+        {<UserContext1/>}
       <Routes>
+        
         {/* <Route path="/movies" element={<Movies />}></Route> */}
         {/* <Route path='/movies/moviesdetail/:id' element={<MoviesDetail />}></Route> */}
         {/* <Route path='/employeeDetails/:id' element={<EmployeeDetails />}></Route> */}
@@ -156,7 +165,7 @@ function App() {
         {/* <Route path="/usequery1" element={<UseQuery1/>}></Route>
         <Route path="/usequery2" element={<UseQuery2/>}></Route> */}
       </Routes>
-
+      {/* </UserContextProvider> */}
 
     </div>
   );
