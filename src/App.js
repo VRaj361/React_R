@@ -44,6 +44,8 @@ import { ReactstrapFormUseState } from './extra/ReactstrapFormUseState';
 
 import {ToastContainer} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import { UserProfile } from './extra/services/PrivateRounting/UserProfile';
+import { UserDashBoard } from './extra/services/PrivateRounting/UserDashBoard';
 function App() {
   //javascript 
   // var name="vraj"//string
@@ -156,9 +158,15 @@ function App() {
         {/* <UserDemo/> */}
         {/* {<UserContext1/>} */}
       <ToastContainer/>
-      <ReactstrapFormUseState/>
+      
+      {/* <ReactstrapFormUseState/> */}
+      
       <Routes>
-        
+          
+        <Route path="/user" element={<UserProfile />}>
+          <Route path="dashboard" element={<UserDashBoard/>}></Route>
+        </Route>
+
         {/* <Route path="/movies" element={<Movies />}></Route> */}
         {/* <Route path='/movies/moviesdetail/:id' element={<MoviesDetail />}></Route> */}
         {/* <Route path='/employeeDetails/:id' element={<EmployeeDetails />}></Route> */}
