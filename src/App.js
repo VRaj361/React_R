@@ -40,6 +40,7 @@ import UserContextProvider from './context/UserContextProvider';
 import { UserDemo } from './context/UserDemo';
 import { UserContext3 } from './context/UserContext3';
 import { UserContext1 } from './context/UserContext1';
+import { ReactstrapFormUseState } from './extra/ReactstrapFormUseState';
 function App() {
   //javascript 
   // var name="vraj"//string
@@ -150,7 +151,9 @@ function App() {
       {/* <MaterailUIBasic/> */}
       {/* <UserContextProvider> */}
         {/* <UserDemo/> */}
-        {<UserContext1/>}
+        {/* {<UserContext1/>} */}
+
+      <ReactstrapFormUseState/>
       <Routes>
         
         {/* <Route path="/movies" element={<Movies />}></Route> */}
