@@ -1,7 +1,8 @@
 import { Button, FormControl, MenuItem, Select,  TextField } from '@mui/material'
 import { Box } from '@mui/system'
 import React,{useState} from 'react'
-
+import { signUp } from './services/BookService'
+import {toast} from 'react-toastify'
 // import { Form, FormGroup, Input, Label } from 'reactstrap'
 
 export const ReactstrapFormUseState = () => {
@@ -9,9 +10,9 @@ export const ReactstrapFormUseState = () => {
     //create one use state and set all the properties turn by turn
     const [user, setUser] = useState({
         name:'',
-        email:'',
-        number:'',
-        gender:''
+        author:'',
+        price:'',
+        category:''
     })
 
     const handleOnchange = (event,property)=>{
@@ -21,7 +22,26 @@ export const ReactstrapFormUseState = () => {
     const handleSubmit = (e)=>{
         console.log("in")
         e.preventDefault();
-        console.log(user);
+        // console.log(user);
+
+        //post the data to the server
+        signUp(user).then((res)=>{
+            console.log(res);
+            console.log("in request")
+            toast.success("Add Book Successfully")
+            setUser({
+                name:'',
+                author:'',
+                price:'',
+                category:''
+            })
+        }).catch(err=>{
+            console.log(err)
+            console.log("in error part")
+            toast.error("Somethings went wrong")
+        })
+
+        
     }
 
     return (
@@ -33,9 +53,9 @@ export const ReactstrapFormUseState = () => {
                 }}
             >
                 <FormControl>
-                    <TextField label="Email" variant='outlined' onChange={(e)=>handleOnchange(e,'email')} value={user.email}>Email</TextField>
+                    <TextField label="Author" variant='outlined' onChange={(e)=>handleOnchange(e,'author')} value={user.author}>Email</TextField>
                     <TextField label="Name" variant='outlined' onChange={(e)=>{handleOnchange(e,'name')}} value={user.name}>Name</TextField>
-                    <TextField label="number" variant='outlined' onChange={(e)=>{handleOnchange(e,'number')}} value={user.number}>Number</TextField>
+                    <TextField label="Price" variant='outlined' onChange={(e)=>{handleOnchange(e,'price')}} value={user.price}>Number</TextField>
                     <Select
                         label="Gender"
                         id="demo-simple-select"
@@ -45,9 +65,9 @@ export const ReactstrapFormUseState = () => {
                             
                         }}
                         onChange={(e)=>{
-                            handleOnchange(e,'gender')
+                            handleOnchange(e,'category')
                         }}
-                        value={user.gender}
+                        value={user.category}
                     >
                         <MenuItem value={"male"}>Male</MenuItem>
                         <MenuItem value={"female"}>Female</MenuItem>

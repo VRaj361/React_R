@@ -41,6 +41,9 @@ import { UserDemo } from './context/UserDemo';
 import { UserContext3 } from './context/UserContext3';
 import { UserContext1 } from './context/UserContext1';
 import { ReactstrapFormUseState } from './extra/ReactstrapFormUseState';
+
+import {ToastContainer} from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 function App() {
   //javascript 
   // var name="vraj"//string
@@ -152,7 +155,7 @@ function App() {
       {/* <UserContextProvider> */}
         {/* <UserDemo/> */}
         {/* {<UserContext1/>} */}
-
+      <ToastContainer/>
       <ReactstrapFormUseState/>
       <Routes>
         
