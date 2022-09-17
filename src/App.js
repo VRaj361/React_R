@@ -46,6 +46,7 @@ import {ToastContainer} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import { UserProfile } from './extra/services/PrivateRounting/UserProfile';
 import { UserDashBoard } from './extra/services/PrivateRounting/UserDashBoard';
+import { RichTextEditor } from './extra/RichTextEditor';
 function App() {
   //javascript 
   // var name="vraj"//string
@@ -154,10 +155,13 @@ function App() {
       {/* <RapidApiWeather/> */}
       {/* <RapidApiStocks/> */}
       {/* <MaterailUIBasic/> */}
+
+      {/* extra */}
       {/* <UserContextProvider> */}
         {/* <UserDemo/> */}
         {/* {<UserContext1/>} */}
       <ToastContainer/>
+      <RichTextEditor/>
       
       {/* <ReactstrapFormUseState/> */}
       
