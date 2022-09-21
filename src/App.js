@@ -47,6 +47,7 @@ import 'react-toastify/dist/ReactToastify.css'
 import { UserProfile } from './extra/services/PrivateRounting/UserProfile';
 import { UserDashBoard } from './extra/services/PrivateRounting/UserDashBoard';
 import { RichTextEditor } from './extra/RichTextEditor';
+import { MaterailUISlider } from './components/MaterailUISlider';
 function App() {
   //javascript 
   // var name="vraj"//string
@@ -155,21 +156,23 @@ function App() {
       {/* <RapidApiWeather/> */}
       {/* <RapidApiStocks/> */}
       {/* <MaterailUIBasic/> */}
+      {/* <MaterailUISlider/> */}
 
       {/* extra */}
-      {/* <UserContextProvider> */}
-        {/* <UserDemo/> */}
-        {/* {<UserContext1/>} */}
       <ToastContainer/>
-      <RichTextEditor/>
+      <UserContextProvider>
+        <UserDemo/>
+      </UserContextProvider>
+        {/* {<UserContext1/>} */}
+      {/* <RichTextEditor/> */}
       
       {/* <ReactstrapFormUseState/> */}
       
       <Routes>
-          
-        <Route path="/user" element={<UserProfile />}>
+          {/* private routing */}
+        {/* <Route path="/user" element={<UserProfile />}>
           <Route path="dashboard" element={<UserDashBoard/>}></Route>
-        </Route>
+        </Route> */}
 
         {/* <Route path="/movies" element={<Movies />}></Route> */}
         {/* <Route path='/movies/moviesdetail/:id' element={<MoviesDetail />}></Route> */}

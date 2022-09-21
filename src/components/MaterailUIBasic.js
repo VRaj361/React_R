@@ -224,14 +224,14 @@ export const MaterailUIBasic = () => {
             <h3>Min Value</h3>{value1[0]}<br></br>
             <h3>Max Value</h3>{value1[1]}
 
-            <Box sx={{ width: 300, height: 300, backgroundColor: `${colorBack}` }}>
+            {/* <Box sx={{ width: 300, height: 300, backgroundColor: `${colorBack}` }}>
                 <FormGroup>
                     <FormControlLabel
                         control={<MaterialUISwitch sx={{ m: 1 }} defaultChecked />}
                         onChange={func1}
                     />
                 </FormGroup>
-            </Box>
+            </Box> */}
 
 
 

@@ -16,6 +16,7 @@ export const RichTextEditor = () => {
 			readonly: false, // all options from https://xdsoft.net/jodit/doc/,
 			placeholder:  'Start typings...'
     }//here config create a problem
+    //it is only works when we use useMemo hook
     
   return (
     <div>
